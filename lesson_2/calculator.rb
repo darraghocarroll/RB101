@@ -34,7 +34,7 @@ prompt("Hi #{name}")
 
 loop do #main loop
 
-  loop do #get abd check validity of first number
+  loop do #check validity of first number
 
     prompt("What is the first number? ")
     int_1 = gets.chomp.to_i
