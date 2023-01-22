@@ -79,7 +79,8 @@ loop do #main loop
     end
   end
 
-  loan_info[:monthly_payment] = loan_info[:amount] * (loan_info[:APR] / (1 - (1 + loan_info[:APR])**(-loan_info[:duration])))
+  loan_info[:monthly_payment] = loan_info[:amount] * (loan_info[:APR]
+    ./ (1 - (1 + loan_info[:APR])**(-loan_info[:duration])))
 
   loan_info.each{|k,v| puts "#{k}: #{v}"}
   prompt("Would you like to perform another operation? y/n ")
@@ -90,14 +91,15 @@ loop do #main loop
 end
 
 prompt("Thank you #{name} for using calculator, goodbye!")
-#problem
-  #input- 
-  #output-
-  #explicit_requirements-
-  #identify_rules-
-  #mental_model-
-#write examples/test cases
-#Data Structures
-#Algorithm
-#Code
+
+# problem
+  # input- 
+  # output-
+  # explicit_requirements-
+  # identify_rules-
+  # mental_model-
+# write examples/test cases
+# Data Structures
+# Algorithm
+# Code
 
