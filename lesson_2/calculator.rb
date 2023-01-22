@@ -1,9 +1,13 @@
+require "pry"
+
 def prompt(message)
   print " => #{message}"
 end
 
 def valid_number?(number)
-  number.to_i != 0  
+  return true if number.to_i != 0  
+  return true if number.to_f != 0  
+  return true if number.to_s == '0'
 end
 
 def valid_operator(operator)
@@ -37,7 +41,7 @@ loop do #main loop
   loop do #check validity of first number
 
     prompt("What is the first number? ")
-    int_1 = gets.chomp.to_i
+    int_1 = gets.chomp.to_f
 
     if valid_number?(int_1)
       break
@@ -48,7 +52,7 @@ loop do #main loop
 
   loop do #get abd check validity of second number
     prompt("what is the second number? ")
-    int_2 = gets.chomp.to_i
+    int_2 = gets.chomp.to_f
 
     if valid_number?(int_2)
       break
@@ -89,16 +93,16 @@ loop do #main loop
       prompt('Dividing the two numbers....')
   end
 
-
+  
   result = case operation 
-  when '1'
+           when '1'
     result = int_1 + int_2
   when '2'
     result = int_1 - int_2
   when '3'
     result = int_1 * int_2
   when '4'
-    result = int_1.to_f / int_2.to_f
+    result = int_1 / int_2
   end
 
   prompt("Your result is #{result}")
@@ -110,7 +114,7 @@ loop do #main loop
 
 end
 
-prompt("Thank you for using calculator, goodbye !")
+prompt("Thank you for using calculator, goodbye!")
 #get interger 1 and 2
 #add intergers together
 #displays result
@@ -120,5 +124,5 @@ prompt("Thank you for using calculator, goodbye !")
 #display array
 
 #return index 0
-#reurn even numbers
+#reurn even numbe
  

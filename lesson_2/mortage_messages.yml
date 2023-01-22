@@ -1,0 +1,8 @@
+#messages for loan program
+
+welcome: "Welcome to the Mortage Loan Calculator! Enter your name: "
+information: "We will need the following information. 1)Loan Amount 2)APR 3)Loan Duration"
+get_amount: "Enter the Loan Amount: "
+get_APR: "Enter the APR: " 
+get_duration: "Enter the Loan Duration in years: "
+
