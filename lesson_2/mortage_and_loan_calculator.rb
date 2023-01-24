@@ -56,10 +56,10 @@ loop do #main loop
     end
   end
 
-  loop do #get APR
+  loop do #get APR and divide by 12 * 100 to get APR/month
 
     prompt(MESSAGES['get_APR'])
-    loan_info[:APR] = gets.chomp.to_f / 1200
+    loan_info[:APR] = gets.chomp.to_f / (12 * 100)
 
     if valid_number?(loan_info[:APR])
       break
@@ -76,7 +76,7 @@ loop do #main loop
       break
     else
       prompt("Sorry that is not a valid duration, try again")
-    end
+    end 
   end
 
   loan_info[:monthly_payment] = loan_info[:amount] * (loan_info[:APR]
